@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="jquery.js"></script>
+        <script>
+        $(function(){
+
+            $('.has').children().hide()
+
+            $('li').has('ul').click(function(event){
+                if(this==event.target){
+                        $(this).children().toggle()
+                }
+            })
+
+        })
+
+        </script>
+        <style>
+
+
+        </style>
+    </head>
+    <body>
+    <ul>
+            <li class='has'>
+
+            11111
+            <ul>
+                <li>222222</li>
+                <li>222222</li>
+                <li>222222</li>
+                <li class='has'>
+
+                    222222
+                        <ul>
+                            <li>333333</li>
+                            <li>333333</li>
+                            <li>333333</li>
+                            <li>333333</li>
+                        </ul>
+                </li>
+            </ul>
+
+            </li>
+            <li>11111</li>
+            <li>11111</li>
+
+    </ul>
+
+    </body>
+</html>

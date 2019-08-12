@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+
+$(function(){
+    $('input[type=button]').click(function(){
+
+      var name=$('input[placeholder=请输入姓名]').val()
+      var age=$('input[placeholder=请输入年龄]').val()
+      var wx=$('input[placeholder=请输入微信号]').val()
+      $('input[placeholder=请输入姓名]').val('')
+      $('input[placeholder=请输入年龄]').val('')
+      $('input[placeholder=请输入微信号]').val('')
+      var $ul=$('<ul></ul>');
+
+      $('.warp').append($ul);
+
+      var $li1=('<li>姓名：'+name+'</li>');
+
+
+      $ul.append($li1);
+
+      var $li2=('<li>年龄：'+age+'</li>');
+
+      $ul.append($li2);
+
+      var $li3=('<li>微信号：'+wx+'</li>');
+
+      $ul.append($li3);
+
+      var $input=('<input type=button  value="删除">')
+
+      $ul.append($input)
+
+    })
+
+    $('.warp').on('click',$('input'),function(evt){
+
+
+        if(evt.target.tagName=="INPUT"){
+              $(evt.target).parent().remove()
+
+        }
+    })
+})
+    </script>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+ul:after{
+   content: '';
+   display: block;
+   clear: both;
+  
+}
+ul{
+        max-width: 600px;
+      margin:10px auto; 
+      border: 1px solid #b6b6b6;
+
+}
+ul li{
+    float: left;
+    padding: 20px;
+    /* background: #b6b6b6; */
+    margin-left: 10px;
+
+}
+ul input{
+    margin-top: 10px;
+    padding: 10px;
+    background: none;
+    display: block;
+    float: right;
+    margin-right: 20px;
+    border: 1px solid #b6b6b6;
+}
+
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="请输入姓名">
+    <input type="text" placeholder="请输入年龄">
+    <input type="text" placeholder="请输入微信号">
+    <input type="button" value='点击'>
+    <div class="warp">
+      
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    	body{background:url(blimg/pinkpink.jpg)}
+        table{text-align:center;border:2px solid lightgrey;}
+        img{width:80px;height:80px;}
+        table tbody{}
+        table thead tr{background:yellow;}
+        table thead tr th{font:18px/30px "黑体";}
+        table tbody td{border:1px solid lightgrey;background:pink;}
+      
+      
+    </style>
+</head>
+<body>
+	
+	
+   <a href="shoplist.html"><strong>购物页面</strong></a>
+    <a href="bl.html"><strong>首页</strong></a>
+    <table  cellspacing="0" width="900" align="center">
+        <thead>
+            <tr>
+                <th><strong>商品展示</strong></th>
+                <th><strong>商品名称</strong></th>
+                <th><strong>价格</strong></th>
+                <th><strong>数量</strong></th>
+                <th><strong>DELETE</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="5">购物车为空</td>
+            </tr>
+            
+            <!-- <tr>
+                <td><img src=""></td>
+                <td>名字</td>
+                <td>价格</td>
+                <td><input type="number" value="10"></td>
+                <td>删除</td>
+            </tr> -->
+        </tbody>
+       
+    </table>
+</body>
+<script src="js/ajax.js"></script>
+<script src="js/cookie.js"></script>
+<script>
+    class Car{
+        constructor(){
+            this.tbody = document.querySelector("tbody");
+            this.url = "http://localhost/百联网/data/goods.json";
+
+            // 1.先请求所有数据
+            this.load();
+            // D1.绑定事件
+            this.addEvent()
+        }
+        addEvent(){
+            var that = this;
+            // D2.采用事件委托绑定删除的事件
+            this.tbody.addEventListener("click",function(eve){
+                if(eve.target.className == "del"){
+                    // D3.获取点击商品的id
+                    that.id = eve.target.parentNode.getAttribute("index");
+                    // D4.删除DOM元素
+                    eve.target.parentNode.remove();
+                    // D5.删除cookie中的数据
+                    that.changeCookie(function(i){
+                        that.goods.splice(i,1)
+                    });
+                }
+            })
+            // U1.采用事件委托绑定修改数量的事件
+            this.tbody.addEventListener("input",function(eve){
+                if(eve.target.className == "num"){
+                    // U2.获取修改数量对应的商品的id
+                    that.id = eve.target.parentNode.parentNode.getAttribute("index");
+                    // U3.获取修改之后的实时数量
+                    // that.num = eve.target.value;
+                    // U4.修改cookie中的数据
+                    that.changeCookie(function(i){
+                        that.goods[i].num = eve.target.value;
+                    });
+                }
+            })
+        }
+        changeCookie(callback){
+            // 先遍历cookie中读取出来的数据
+            var i = 0;
+            this.goods.some((val,index)=>{
+                // 拿到与点击相同的数据，结束
+                i = index;
+                return val.id == this.id;
+            })
+            callback(i);
+            // U5.最后要把操作之后的数据，再设置给cookie
+            setCookie("goods",JSON.stringify(this.goods));
+        }
+        load(){
+            var that = this;
+            ajaxGet(this.url,function(res){
+                that.res = JSON.parse(res);
+                // 2.读取cookie
+                that.getCookie()
+            })
+        }
+        getCookie(){
+            this.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
+
+            // 3.开始比对数据，渲染页面
+            this.display();
+        }
+        display(){
+            var str = "";
+            // 遍历所有数据
+            this.res.forEach((resVal)=>{
+                // 遍历cookie中的数据
+                this.goods.forEach((goodsVal)=>{
+                    // 比较,一致,渲染对应数据
+                    if(resVal.goodsId == goodsVal.id){
+                        str += `<tr index="${resVal.goodsId}">
+                                    <td><img src="${resVal.url}"></td>
+                                    <td>${resVal.name}</td>
+                                    <td>${resVal.price}</td>
+                                    <td><input class="num" type="number" value="${goodsVal.num}" min=1></td>
+                                    <td class="del">删除</td>
+                                </tr>`;
+                    }
+                })
+            })
+            this.tbody.innerHTML = str;
+        }
+    }
+
+    new Car;
+
+
+
+
+
+
+
+
+
+
+
+    //     updateCookie(){
+    //         // 先遍历cookie中读取出来的数据
+    //         var i = 0;
+    //         this.goods.some((val,index)=>{
+    //             // 拿到与点击相同的数据，结束
+    //             i = index;
+    //             return val.id == this.id;
+    //         })
+    //         this.goods[i].num = this.num;
+
+    //         // U5.最后要把操作之后的数据，再设置给cookie
+    //         setCookie("goods",JSON.stringify(this.goods));
+    //     }
+    //     deleteCookie(){
+    //         // 先遍历cookie中读取出来的数据
+    //         var i = 0;
+    //         this.goods.some((val,index)=>{
+    //             // 拿到与点击相同的数据，结束
+    //             i = index;
+    //             return val.id == this.id;
+    //         })
+    //         // 根据结束时的索引，删除对应的数据
+    //         this.goods.splice(i,1);
+
+    //         // D6.最后要把操作之后的数据，再设置给cookie
+    //         setCookie("goods",JSON.stringify(this.goods));
+    //     }
+</script>
+</html>

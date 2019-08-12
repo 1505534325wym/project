@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <script>
+
+$(function(){
+ /*   var a=$('div').css(['width','height','background'])
+    for(var i in a){
+        console.log(a[i])
+    }*/
+   /* document.onclick=function(){
+        //alert(1)
+        //$('div').toggleClass('abc')
+        var a = $('div').css(['width','height'])
+
+        $.each(a,function(index,value){
+            alert(value)
+        })
+
+    }*/
+
+
+$('.navnav li').click(function(){
+     $(document).scrollTop($('div').eq($(this).index()).offset().top)
+
+})
+
+
+})
+
+    </script>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.div1{margin: 0 auto;height:1000px;}
+.div1 p{line-height: 50px;font:30px/50px "";margin-left:30px;}
+
+.div2{ margin: 0 auto;height:1000px;}
+.div2 p{line-height: 50px;font:30px/50px "";;margin-left:30px;}
+
+.div3{margin: 0 auto;height:1000px;}
+.div3 p{line-height: 50px;font:30px/50px "";margin-left:30px;}
+
+.div4{ margin: 0 auto;height:1000px;}
+.div4 p{line-height: 50px;font:30px/50px "";margin-left:30px;}
+
+
+
+
+.navnav{
+    width: 100px;
+    height: 204px;
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+  background: hotpink;
+
+}
+.navnav li{
+    height: 200px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    border-top: 1px solid #b6b6b6;
+}
+
+    </style>
+</head>
+<body>
+<ul class="navnav">
+    <li>div1</li>
+    <li>div2</li>
+    <li>div3</li>
+    <li>div4</li>
+</ul>
+    <div class="div1">
+    	<p>零食</p>
+    	<ul>
+    	  <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	       <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	       <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	       <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	      
+    	</ul>
+    </div>
+    
+    
+    <div class="div2">
+    	<p>零食</p>
+    	<ul>
+    	  <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	       <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	       <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	       <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	      
+    	</ul>
+    </div>
+    
+    
+    <div class="div3">
+    	<p>零食</p>
+    	<ul>
+    	  <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	       <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	       <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	       <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	      
+    	</ul>
+    </div>
+    
+    
+    
+   <div class="div4">
+    	<p>零食</p>
+    	<ul>
+    	  <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	       <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	       <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	       <li>
+    		<img src="../blimg/like-1.jpg">
+    		<li><a href="#"></a></li>
+    		<div class="price">
+            	<b>￥62.5</b>
+            	<span><img src="../blimg/xin2.png"> 收藏</span>
+	        </div>
+	       </li>
+	      
+    	</ul>
+    </div>
+</body>
+</html>

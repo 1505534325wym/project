@@ -1,0 +1,213 @@
+﻿[
+	{           
+		        "url":"blimg/list1.jpg",
+		        "price":"￥79.00",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"在饮用水中 畅销",
+				"goodsId":"1"
+	},
+	{
+	            "url":"blimg/list2.jpg",
+		        "price":"￥108.00",
+		        "name":"巴黎水天然有气矿泉水（原味）气泡水330ml*24瓶、箱 法国",
+				"tip":"在饮用水中 畅销",
+				"goodsId":"2"
+	},
+	{
+	            "url":"blimg/list3.jpg",
+		        "price":"￥13.80",
+		        "name":"农夫山泉天然水（整箱装）380ml*12",
+				"tip":"在饮用水中 畅销",
+				"goodsId":"3"
+	},
+	{
+	           "url":"blimg/list4.jpg",
+		        "price":"￥115.00",
+		        "name":"巴黎水天然有气矿泉水（原味）气泡水330ml",
+				"tip":"在饮用水中 畅销",
+				"goodsId":"4"
+	},
+	{       
+	          "url":"blimg/list5.jpg",
+		        "price":"￥105.00",
+		        "name":"恒大冰泉长白山天然矿泉水330ml",
+				"tip":"在饮用水中 畅销",
+				"goodsId":"5"
+	},
+	{
+	            "url":"blimg/list6.jpg",
+		        "price":"￥76.00",
+		        "name":"依云 Evian 天然矿泉水 500ml 法国进口",
+				"tip":"好用1",
+				"goodsId":"6"
+	},
+	{
+	            "url":"blimg/list7.jpg",
+		        "price":"￥5.00",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"7"
+	},
+	{
+	            "url":"blimg/list8.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"8"
+	},
+	{
+	           "url":"blimg/list9.jpg",
+		        "price":"￥105.00",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"9"
+	},
+	{
+	           "url":"blimg/list10.jpg",
+		        "price":"￥105.00",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"10"
+	},
+	{
+	           "url":"blimg/list11.jpg",
+		        "price":"￥105.00",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"11"
+	},
+	{
+	           "url":"blimg/list12.jpg",
+		        "price":"￥105.00",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"12"
+	},
+	{
+	           "url":"blimg/list13.jpg",
+		        "price":"￥105.00",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"13"
+	},
+	{
+	           "url":"blimg/list14.jpg",
+		        "price":"￥105.00",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"14"
+	},
+	{
+	           "url":"blimg/list15.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"15"
+	},
+	{
+	           "url":"blimg/list16.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"16"
+	},
+	{
+	           "url":"blimg/list17.jpg",
+		        "price":"￥105.00",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"17"
+	},
+	{
+	           "url":"blimg/list18.jpg",
+		        "price":"￥105.00",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"18"
+	},
+	{
+	           "url":"blimg/list19.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"19"
+	},
+	{
+	           "url":"blimg/list20.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"20"
+	},
+	{
+	           "url":"blimg/list21.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"21"
+	},
+	{
+	           "url":"blimg/list22.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"22"
+	},
+	{
+	           "url":"blimg/list23.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"23"
+	},
+	{
+	           "url":"blimg/list24.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"24"
+	},
+	{
+	           "url":"blimg/list25.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"25"
+	},
+	{
+	           "url":"blimg/list26.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"26"
+	},
+	{
+	           "url":"blimg/list27.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"27"
+	},
+	{
+	           "url":"blimg/list28.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"28"
+	},
+	{
+	           "url":"blimg/list29.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"29"
+	},
+	{
+	           "url":"blimg/list30.jpg",
+		        "price":"100",
+		        "name":"依云 Evian 天然矿泉水 500ml*24瓶/箱 法国进口",
+				"tip":"好用1",
+				"goodsId":"30"
+	}
+	
+]

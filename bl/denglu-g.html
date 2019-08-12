@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	<style>
+		body{background:url(blimg/pinkpink.jpg)}
+		
+		 .cont{
+				   height: 600px;
+				   width: 100%;
+				   text-align: center;
+				  color:darkgreen
+	  
+				 
+		}
+	</style>
+</head>
+<body>
+     <h2 style="text-align: center;padding: 50px;font-size: 40px;color:darkgreen">百联网 - 登录</h2>
+	 <div class="cont">
+    用户：<input type="text" id="user"><br><br>
+    密码：<input type="text" id="pass"><br><br>
+    <input type="button" id="btn" value="登录">
+    <p>登录的状态：<span></span></p>
+</div>
+</body>
+<script src="js/jquery.1.12.4.js"></script>
+<script>
+    class Login{
+        constructor(){
+            // 登录的接口
+            this.url = "http://api.icodeilife.cn:81/user";
+            // 获取元素
+            this.user = $("#user");
+            this.pass = $("#pass");
+            this.btn = $("#btn");
+            this.state = $("p span");
+            // 绑定点击事件
+            this.addEvent();
+        }
+        addEvent(){
+            var that = this;
+            this.btn.click(function(){
+                // 开启ajax
+                that.load()
+            })
+        }
+        load(){
+            // 请求登录接口
+            $.ajax({
+                url:this.url,
+                data:{
+                    type:"login",
+                    user:this.user.val(),
+                    pass:this.pass.val(),
+                },
+                success:(res)=>{
+                    // 请求成功之后，解析数据，根据数据的返回信息，决定不同的状态
+                    this.res = JSON.parse(res);
+                    // console.log(res);
+                    if(this.res.code == 2){
+                        this.state.html("帐号密码不符，请<a href='denglu-g.html'>重新登录</a>")
+                    }else if(this.res.code == 1){
+                        // 登录成功之后，存储状态
+                        this.setState()
+						
+                        this.state.html("登录成功,3秒后跳转到<a href='bl.html'>首页</a>");
+                        setTimeout(() => {
+                            location.href="bl.html";
+                        }, 3000);
+                        
+                    }else if(this.res.code == 0){
+                        this.state.html("不存在该用户信息，请<a href='login.html'>注册</a>")
+                    }
+                }
+            })
+        }
+        setState(){
+        	
+            // 将当前登录成功后返回的用户信息作为登录成功的状态
+            localStorage.setItem("loginUser",JSON.stringify(this.res.msg));
+            
+        }
+    }
+    
+    new Login();
+</script>
+</html>
